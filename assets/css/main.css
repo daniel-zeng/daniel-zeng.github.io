@@ -2673,7 +2673,8 @@ h2 header formatting - name and intro to me
 			background-color: var(--about-me-color);
 			color: #c7ebe8;
 
-			height: 70vh;
+			/*actually it seems like i won't be needing this: cuz content fits and pushes it out*/
+			/*height: 70vh;*/
 		}
 
 			#about .aboutme {
