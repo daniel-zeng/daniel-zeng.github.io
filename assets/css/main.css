@@ -1478,9 +1478,18 @@ h2 header formatting - name and intro to me
 		color: inherit;
 		text-decoration: none;
 	}
+		a.undername {
+			border-bottom-color: transparent;
+			color:#003262;
+			font-size: 1.3em;
+		}
 
 		a:hover {
 			border-bottom-color: transparent;
+		}
+
+		a.undername:hover {
+			color: #fdb515;
 		}
 
 	strong, b {
