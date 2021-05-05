@@ -2692,6 +2692,12 @@ h2 header formatting - name and intro to me
 			/*height: 70vh;*/
 		}
 
+			#about .name {
+				color: black;
+				border-bottom-color: transparent;
+				font-size: 2.7em;
+				padding: 0.0em 1em
+			}
 			#about .aboutme {
 				color: black;
 				font-size: 2.2em;
