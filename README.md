@@ -1,5 +1,5 @@
 # Daniel Zeng Website
 Hello! Welcome to my website.
-I am currently an undergraduate studying Computer Science at the University of California, Berkeley. Highly experienced in machine learning, software engineering, and research.
+I am currently a graduate student studying Computer Science at the Stanford. Highly experienced in machine learning, software engineering, and research.
 
-Feel free to reach out to me at danielzeng (at) berkeley (dot) edu! 
+Feel free to reach out to me at danielzeng (at) stanford (dot) edu! 
