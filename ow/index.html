@@ -6,7 +6,7 @@
 <body>
 
 <img src="../content/base.jpg" style="margin:-8; padding:0; display:block" alt="Base">
-<div style="position: absolute; top: 1560px; left: 260px; text-align: center; color: white; font-family: 'Source Sans Pro', sans-serif; font-size: 700%;"><span id='date'></span></div>
+<div id='date_st' style="position: absolute; top: 1560px; left: 260px; text-align: center; color: white; font-family: 'Source Sans Pro', sans-serif; font-size: 700%;"><span id='date'></span></div>
 </body>
 
 <script>
@@ -16,7 +16,10 @@ var year = d.getFullYear();
 var month = d.getMonth();
 var monthArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
 month = monthArr[month];
-var dstr = month + " " + day + ", " + year
+var dstr = month + " " + day + ", " + year;
 document.getElementById('date').innerHTML=dstr;
+if (day < 10) {document.getElementById("date_st").style.left="300px"; }
+
+
 </script>
 </html>
