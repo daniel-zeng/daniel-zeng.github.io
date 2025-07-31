@@ -1,5 +1,3 @@
 # Daniel Zeng Website
-Hello! Welcome to my website.
-I graduated with Master's in Computer Science at Stanford. Highly experienced in research, machine learning, and software engineering.
 
-Feel free to reach out to me at danielzeng (at) stanford (dot) edu! 
+I am a Senior ML Research Engineer at Genesis Therapeutics, focusing on generative modeling for drug discovery. My role integrates active involvement in ML research with a strong foundation in software engineering. I hold a M.S. Computer Science from Stanford and a B.A. Computer Science from UC Berkeley.
