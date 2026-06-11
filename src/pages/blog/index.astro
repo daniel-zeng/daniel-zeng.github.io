@@ -1,10 +1,29 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
 ---
 
 <Base title="Blog · Daniel Zeng">
-  <section class="fade" style="--d: 1; margin-top: 0;">
+  <section class="fade" style="--d: 1">
     <h2>Blog</h2>
-    <p class="muted">Nothing here yet. Writing soon.</p>
+    {posts.length === 0 ? (
+      <p class="muted">Nothing here yet. Writing soon.</p>
+    ) : (
+      <ul class="pubs">
+        {posts.map((p) => (
+          <li>
+            <span class="date">{fmt(p.data.date)}</span>
+            <span><a href={`/blog/${p.id}/`}>{p.data.title}</a></span>
+          </li>
+        ))}
+      </ul>
+    )}
   </section>
 </Base>
