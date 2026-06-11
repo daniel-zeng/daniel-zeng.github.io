@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  font-family: Palatino, 'Palatino Linotype', Georgia, serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text);
