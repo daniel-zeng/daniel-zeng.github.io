@@ -71,7 +71,7 @@ const publications = [
             <p class="meta">
               {p.authors.map((a, i) => (
                 <>{i > 0 && ', '}<span class={a === ME ? 'me' : ''}>{a}</span></>
-              ))}{' · '}{p.note}
+              ))}{' · '}<span class="note">{p.note}</span>
             </p>
           </span>
         </li>

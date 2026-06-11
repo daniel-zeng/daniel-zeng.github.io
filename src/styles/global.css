@@ -133,10 +133,25 @@ ul {
   font-variant-numeric: tabular-nums;
 }
 
+.pubs > li > span > a {
+  text-decoration: none;
+}
+
+.pubs > li > span > a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gray);
+  text-underline-offset: 3px;
+}
+
 .pubs .meta {
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
   font-size: 0.85rem;
+  line-height: 1.5;
   color: var(--light);
+}
+
+.pubs .meta .note {
+  font-style: italic;
 }
 
 .pubs .meta .me {
