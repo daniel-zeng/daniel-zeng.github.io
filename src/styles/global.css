@@ -43,7 +43,7 @@ main {
 .site-header {
   max-width: 640px;
   margin: 0 auto;
-  padding: 5rem 1.5rem 0;
+  padding: 6rem 1.5rem 0;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
