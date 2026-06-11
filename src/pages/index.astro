@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+
+// TODO: Resume is a placeholder until a web-ready PDF exists
+const links = [
+  { label: 'Resume', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/daniel-zeng' },
+  { label: 'Scholar', href: 'https://scholar.google.com/citations?user=PpLhFIgAAAAJ' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/daniel-zeng/' },
+];
+
+const publications = [
+  {
+    date: '2025 Oct',
+    title: 'Pearl: A Foundation Model for Placing Every Atom in the Right Location',
+    note: 'Technical report',
+    href: 'https://arxiv.org/abs/2510.24670',
+  },
+  {
+    date: '2023 May',
+    title: 'PRODIGY: Enabling In-context Learning Over Graphs',
+    note: 'NeurIPS 2023 Spotlight',
+    href: 'https://arxiv.org/abs/2305.12600',
+  },
+  {
+    date: '2022 Jul',
+    title: 'ViRel: Unsupervised Visual Relations Discovery with Graph-level Analogy',
+    note: 'ICML 2022 Workshop',
+    href: 'https://arxiv.org/abs/2207.00590',
+  },
+];
+---
+
+<Base title="Daniel Zeng">
+  <section class="fade" style="--d: 1; margin-top: 0;">
+    <p>I am an AI researcher and engineer.</p>
+    <p>
+      I'm currently exploring reasoning, agents, and recursive self-improvement
+      in foundation models.
+    </p>
+    <p>
+      From 2023 to 2025, I was at Genesis Molecular AI, where I worked on machine
+      learning for drug discovery. I built the data systems behind
+      <a href="https://arxiv.org/abs/2510.24670">Pearl</a>, a foundation model for
+      protein structure, and an active learning platform that screened billions of
+      compounds.
+    </p>
+    <p>
+      I did my MS in computer science at Stanford and my BS at UC Berkeley.
+    </p>
+    <p class="links-row">
+      {links.map((l, i) => (
+        <>
+          <a href={l.href}>{l.label}</a>
+          {i < links.length - 1 && ' / '}
+        </>
+      ))}
+    </p>
+  </section>
+
+  <section class="fade" style="--d: 2">
+    <h2>Publications</h2>
+    <ul class="pubs">
+      {publications.map((p) => (
+        <li>
+          <span class="date">{p.date}</span>
+          <span><a href={p.href}>{p.title}</a> <span class="note">{p.note}</span></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <footer class="fade" style="--d: 3">
+    <p class="muted">
+      Questions or inquiries? Reach me on
+      <a href="https://www.linkedin.com/in/daniel-zeng/">LinkedIn</a>.
+    </p>
+  </footer>
+</Base>
