@@ -9,6 +9,9 @@ interface Props {
 const { title, description = 'Daniel Zeng. AI researcher and engineer.' } = Astro.props;
 const path = Astro.url.pathname;
 const isBlog = path.startsWith('/blog');
+
+// Flip to true to show the Home | Blog nav once the blog is real
+const SHOW_NAV = false;
 ---
 
 <!doctype html>
@@ -22,10 +25,12 @@ const isBlog = path.startsWith('/blog');
   <body>
     <header class="site-header fade" style="--d: 0">
       <a class="name" href="/">Daniel Zeng</a>
-      <nav>
-        <a href="/" class={!isBlog ? 'active' : ''}>Home</a>
-        <a href="/blog" class={isBlog ? 'active' : ''}>Blog</a>
-      </nav>
+      {SHOW_NAV && (
+        <nav>
+          <a href="/" class={!isBlog ? 'active' : ''}>Home</a>
+          <a href="/blog" class={isBlog ? 'active' : ''}>Blog</a>
+        </nav>
+      )}
     </header>
     <main>
       <slot />
