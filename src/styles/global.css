@@ -43,7 +43,7 @@ main {
 .site-header {
   max-width: 640px;
   margin: 0 auto;
-  padding: 6rem 1.5rem 0;
+  padding: 7rem 1.5rem 0;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -115,6 +115,18 @@ ul {
   color: var(--light);
 }
 
+.links-row a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.links-row a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--underline);
+  text-underline-offset: 3px;
+}
+
 .pubs li {
   display: flex;
   gap: 1.25rem;
@@ -128,9 +140,14 @@ ul {
 .pubs .date {
   flex-shrink: 0;
   width: 5rem;
+  text-align: right;
   font-size: 0.85rem;
   color: var(--light);
   font-variant-numeric: tabular-nums;
+}
+
+.pubs > li > span:last-of-type {
+  line-height: 1.4;
 }
 
 .pubs > li > span > a {
