@@ -132,10 +132,14 @@ ul {
   font-variant-numeric: tabular-nums;
 }
 
-.pubs .note {
+.pubs .meta {
+  margin-top: 0.15rem;
   font-size: 0.85rem;
   color: var(--light);
-  white-space: nowrap;
+}
+
+.pubs .meta .me {
+  color: var(--gray);
 }
 
 .muted {

@@ -9,22 +9,27 @@ const links = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/daniel-zeng/' },
 ];
 
+const ME = 'Daniel Zeng';
+
 const publications = [
   {
     date: '2025 Oct',
     title: 'Pearl: A Foundation Model for Placing Every Atom in the Right Location',
+    authors: ['Genesis Research Team'],
     note: 'Technical report',
     href: 'https://arxiv.org/abs/2510.24670',
   },
   {
     date: '2023 May',
     title: 'PRODIGY: Enabling In-context Learning Over Graphs',
+    authors: ['Qian Huang', 'Hongyu Ren', 'Peng Chen', 'Gregor Kržmanc', 'Daniel Zeng', 'Percy Liang', 'Jure Leskovec'],
     note: 'NeurIPS 2023 Spotlight',
     href: 'https://arxiv.org/abs/2305.12600',
   },
   {
     date: '2022 Jul',
     title: 'ViRel: Unsupervised Visual Relations Discovery with Graph-level Analogy',
+    authors: ['Daniel Zeng', 'Tailin Wu', 'Jure Leskovec'],
     note: 'ICML 2022 Workshop',
     href: 'https://arxiv.org/abs/2207.00590',
   },
@@ -39,14 +44,14 @@ const publications = [
       in foundation models.
     </p>
     <p>
-      From 2023 to 2025, I was at Genesis Molecular AI, where I worked on machine
-      learning for drug discovery. I built the data systems behind
-      <a href="https://arxiv.org/abs/2510.24670">Pearl</a>, a foundation model for
-      protein structure, and an active learning platform that screened billions of
-      compounds.
+      From 2023 to 2026, I was at Genesis Molecular AI, where I worked on machine
+      learning for drug discovery. I built data infrastructure for
+      <a href="https://arxiv.org/abs/2510.24670">Pearl</a>, a state-of-the-art
+      protein folding foundation model, and an active learning platform that
+      screened billions of compounds.
     </p>
     <p>
-      I did my MS in computer science at Stanford and my BS at UC Berkeley.
+      Before that, I studied computer science at Stanford (MS) and UC Berkeley (BS).
     </p>
     <p class="links-row">
       {links.map((l, i) => (
@@ -64,7 +69,14 @@ const publications = [
       {publications.map((p) => (
         <li>
           <span class="date">{p.date}</span>
-          <span><a href={p.href}>{p.title}</a> <span class="note">{p.note}</span></span>
+          <span>
+            <a href={p.href}>{p.title}</a>
+            <p class="meta">
+              {p.authors.map((a, i) => (
+                <>{i > 0 && ', '}<span class={a === ME ? 'me' : ''}>{a}</span></>
+              ))}{' · '}{p.note}
+            </p>
+          </span>
         </li>
       ))}
     </ul>
