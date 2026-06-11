@@ -1,4 +1,6 @@
 ---
+import Base from '../layouts/Base.astro';
+
 // TODO: Resume is a placeholder until a web-ready PDF exists
 const links = [
   { label: 'Resume', href: '#' },
@@ -9,199 +11,69 @@ const links = [
 
 const publications = [
   {
+    date: '2025 Oct',
     title: 'Pearl: A Foundation Model for Placing Every Atom in the Right Location',
-    authors: 'Genesis Research Team',
-    venue: 'Technical report · 2025',
+    note: 'Technical report',
     href: 'https://arxiv.org/abs/2510.24670',
   },
   {
+    date: '2023 May',
     title: 'PRODIGY: Enabling In-context Learning Over Graphs',
-    authors: 'Qian Huang, Hongyu Ren, Peng Chen, Gregor Kržmanc, Daniel Zeng, Percy Liang, Jure Leskovec',
-    venue: 'NeurIPS 2023 · Spotlight',
+    note: 'NeurIPS 2023 Spotlight',
     href: 'https://arxiv.org/abs/2305.12600',
   },
   {
+    date: '2022 Jul',
     title: 'ViRel: Unsupervised Visual Relations Discovery with Graph-level Analogy',
-    authors: 'Daniel Zeng, Tailin Wu, Jure Leskovec',
-    venue: 'ICML 2022 Beyond Bayes Workshop',
+    note: 'ICML 2022 Workshop',
     href: 'https://arxiv.org/abs/2207.00590',
   },
 ];
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Daniel Zeng</title>
-    <meta name="description" content="Daniel Zeng. Machine learning for drug discovery." />
-  </head>
-  <body>
-    <main>
-      <header class="fade" style="--d: 0">
-        <h1>Daniel Zeng</h1>
-        <nav>
-          {links.map((l) => <a href={l.href}>{l.label}</a>)}
-        </nav>
-      </header>
+<Base title="Daniel Zeng">
+  <section class="fade" style="--d: 1; margin-top: 0;">
+    <p>I am an AI researcher and engineer.</p>
+    <p>
+      I'm currently exploring reasoning, agents, and recursive self-improvement
+      in foundation models.
+    </p>
+    <p>
+      From 2023 to 2025, I was at Genesis Molecular AI, where I worked on machine
+      learning for drug discovery. I built the data systems behind
+      <a href="https://arxiv.org/abs/2510.24670">Pearl</a>, a foundation model for
+      protein structure, and an active learning platform that screened billions of
+      compounds.
+    </p>
+    <p>
+      I did my MS in computer science at Stanford and my BS at UC Berkeley.
+    </p>
+    <p class="links-row">
+      {links.map((l, i) => (
+        <>
+          <a href={l.href}>{l.label}</a>
+          {i < links.length - 1 && ' / '}
+        </>
+      ))}
+    </p>
+  </section>
 
-      <section class="fade" style="--d: 1">
-        <p>I work on machine learning for drug discovery.</p>
-        <p>
-          At Genesis Molecular AI, I built the distributed data systems behind
-          <a href="https://arxiv.org/abs/2510.24670">Pearl</a>, a foundation model
-          for protein structure, and an active learning platform that screened
-          billions of compounds with ML in the loop. My job sat between research
-          and production: turning models into systems that ran inside live drug
-          programs, often in weeks.
-        </p>
-        <p>
-          I did my MS in computer science at Stanford and my BS at UC Berkeley.
-        </p>
-      </section>
+  <section class="fade" style="--d: 2">
+    <h2>Publications</h2>
+    <ul class="pubs">
+      {publications.map((p) => (
+        <li>
+          <span class="date">{p.date}</span>
+          <span><a href={p.href}>{p.title}</a> <span class="note">{p.note}</span></span>
+        </li>
+      ))}
+    </ul>
+  </section>
 
-      <section class="fade" style="--d: 2">
-        <h2>Publications</h2>
-        <ul class="pubs">
-          {publications.map((p) => (
-            <li>
-              <a href={p.href}>{p.title}</a>
-              <p class="meta">{p.authors}</p>
-              <p class="meta">{p.venue}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <footer class="fade" style="--d: 3">
-        <p>Questions or inquiries? Reach me on <a href="https://www.linkedin.com/in/daniel-zeng/">LinkedIn</a>.</p>
-      </footer>
-    </main>
-  </body>
-</html>
-
-<style>
-  :root {
-    --bg: #ffffff;
-    --text: #282828;
-    --gray: #6f6f6f;
-    --light: #b4b4b4;
-    --underline: #d4d4d4;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #161616;
-      --text: #ededed;
-      --gray: #a0a0a0;
-      --light: #6f6f6f;
-      --underline: #3f3f3f;
-    }
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    background: var(--bg);
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--gray);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  main {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 9rem 1.5rem 6rem;
-  }
-
-  h1 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--light);
-    margin-bottom: 1.25rem;
-  }
-
-  header nav {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.25rem;
-  }
-
-  section,
-  footer {
-    margin-top: 3.5rem;
-  }
-
-  section p + p {
-    margin-top: 1.25rem;
-  }
-
-  a {
-    color: var(--text);
-    text-decoration: underline;
-    text-decoration-color: var(--underline);
-    text-underline-offset: 3px;
-    transition: text-decoration-color 0.15s;
-  }
-
-  a:hover {
-    text-decoration-color: var(--gray);
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  .pubs li + li {
-    margin-top: 1.5rem;
-  }
-
-  .meta {
-    font-size: 0.875rem;
-    color: var(--light);
-  }
-
-  @media (max-width: 540px) {
-    main {
-      padding-top: 5rem;
-    }
-  }
-
-  .fade {
-    opacity: 0;
-    transform: translateY(8px);
-    animation: fade 0.7s ease forwards;
-    animation-delay: calc(var(--d) * 90ms);
-  }
-
-  @keyframes fade {
-    to {
-      opacity: 1;
-      transform: none;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .fade {
-      animation: none;
-      opacity: 1;
-      transform: none;
-    }
-  }
-</style>
+  <footer class="fade" style="--d: 3">
+    <p class="muted">
+      Questions or inquiries? Reach me on
+      <a href="https://www.linkedin.com/in/daniel-zeng/">LinkedIn</a>.
+    </p>
+  </footer>
+</Base>
