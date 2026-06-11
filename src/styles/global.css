@@ -37,13 +37,16 @@ body {
 main {
   max-width: 640px;
   margin: 0 auto;
-  padding: 0 1.5rem 6rem;
+  padding: 7rem 1.5rem 6rem;
 }
 
 .site-header {
   max-width: 640px;
   margin: 0 auto;
-  padding: 8rem 1.5rem 0;
+  padding: 2.5rem 1.5rem 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .site-header .name {
@@ -55,8 +58,7 @@ main {
 
 .site-header nav {
   display: flex;
-  gap: 1rem;
-  margin-top: 0.35rem;
+  gap: 1.25rem;
 }
 
 .site-header nav a {
@@ -141,8 +143,8 @@ ul {
 }
 
 @media (max-width: 540px) {
-  .site-header {
-    padding-top: 4.5rem;
+  main {
+    padding-top: 4rem;
   }
   .pubs li {
     flex-wrap: wrap;
