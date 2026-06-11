@@ -1,14 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// TODO: Resume is a placeholder until a web-ready PDF exists
-const links = [
-  { label: 'Resume', href: '#' },
-  { label: 'GitHub', href: 'https://github.com/daniel-zeng' },
-  { label: 'Scholar', href: 'https://scholar.google.com/citations?user=PpLhFIgAAAAJ' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/daniel-zeng/' },
-];
-
 const publications = [
   {
     date: '2025 Oct',
@@ -32,7 +24,7 @@ const publications = [
 ---
 
 <Base title="Daniel Zeng">
-  <section class="fade" style="--d: 1; margin-top: 0;">
+  <section class="fade" style="--d: 1">
     <p>I am an AI researcher and engineer.</p>
     <p>
       I'm currently exploring reasoning, agents, and recursive self-improvement
@@ -47,14 +39,6 @@ const publications = [
     </p>
     <p>
       I did my MS in computer science at Stanford and my BS at UC Berkeley.
-    </p>
-    <p class="links-row">
-      {links.map((l, i) => (
-        <>
-          <a href={l.href}>{l.label}</a>
-          {i < links.length - 1 && ' / '}
-        </>
-      ))}
     </p>
   </section>
 

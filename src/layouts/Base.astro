@@ -7,8 +7,16 @@ interface Props {
 }
 
 const { title, description = 'Daniel Zeng. AI researcher and engineer.' } = Astro.props;
-const path = Astro.url.pathname;
-const isBlog = path.startsWith('/blog');
+const isBlog = Astro.url.pathname.startsWith('/blog');
+
+// TODO: Resume is a placeholder until a web-ready PDF exists
+const links = [
+  { label: 'Blog', href: '/blog' },
+  { label: 'Resume', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/daniel-zeng' },
+  { label: 'Scholar', href: 'https://scholar.google.com/citations?user=PpLhFIgAAAAJ' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/daniel-zeng/' },
+];
 ---
 
 <!doctype html>
@@ -23,8 +31,9 @@ const isBlog = path.startsWith('/blog');
     <header class="site-header fade" style="--d: 0">
       <a class="name" href="/">Daniel Zeng</a>
       <nav>
-        <a href="/" class={!isBlog ? 'active' : ''}>Home</a>
-        <a href="/blog" class={isBlog ? 'active' : ''}>Blog</a>
+        {links.map((l) => (
+          <a href={l.href} class={l.href === '/blog' && isBlog ? 'active' : ''}>{l.label}</a>
+        ))}
       </nav>
     </header>
     <main>
