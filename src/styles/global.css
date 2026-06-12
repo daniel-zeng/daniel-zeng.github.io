@@ -33,6 +33,7 @@
   --mid: #8d877e;
   --light: #a8a39c;
   --underline: #cfc9c1;
+  --me: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +45,7 @@
     --mid: #8b857d;
     --light: #6f6a64;
     --underline: #44403a;
+    --me: #ffffff;
   }
 }
 
@@ -197,7 +199,7 @@ ul {
 }
 
 .pubs .meta .me {
-  color: var(--text);
+  color: var(--me);
 }
 
 .muted {
