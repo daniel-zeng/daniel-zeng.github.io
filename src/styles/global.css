@@ -181,7 +181,7 @@ ul {
 
 .pubs .venue {
   margin-top: 0.2rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   font-style: italic;
   color: var(--gray);
@@ -189,9 +189,9 @@ ul {
 
 .pubs .meta {
   margin-top: 0.05rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--mid);
+  color: var(--gray);
 }
 
 .pubs .meta .me {
