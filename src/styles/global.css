@@ -115,17 +115,6 @@ ul {
   color: var(--light);
 }
 
-.links-row a {
-  color: var(--gray);
-  text-decoration: none;
-}
-
-.links-row a:hover {
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-color: var(--underline);
-  text-underline-offset: 3px;
-}
 
 .pubs li {
   display: flex;

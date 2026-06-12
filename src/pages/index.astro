@@ -1,9 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-// TODO: Resume is a placeholder until a web-ready PDF exists
+// TODO: add Resume link back once a web-ready (sanitized) PDF exists
 const links = [
-  { label: 'Resume', href: '#' },
   { label: 'GitHub', href: 'https://github.com/daniel-zeng' },
   { label: 'Scholar', href: 'https://scholar.google.com/citations?user=PpLhFIgAAAAJ' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/daniel-zeng/' },
@@ -48,7 +47,7 @@ const publications = [
       distillation at Google Research.
     </p>
     <p>
-      I studied computer science at Stanford (MS) and UC Berkeley (BS).
+      I studied computer science at Stanford (MS) and UC Berkeley (BA).
     </p>
     <p class="links-row">
       {links.map((l, i) => (
