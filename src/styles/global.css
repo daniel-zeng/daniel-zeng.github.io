@@ -29,6 +29,7 @@
   --bg: #fffefc;
   --text: #1f1f1f;
   --gray: #6b6b6b;
+  --meta: #565656;
   --mid: #8d877e;
   --light: #a8a39c;
   --underline: #cfc9c1;
@@ -39,6 +40,7 @@
     --bg: #181715;
     --text: #ece9e4;
     --gray: #a39e97;
+    --meta: #b8b3ac;
     --mid: #8b857d;
     --light: #6f6a64;
     --underline: #44403a;
@@ -184,18 +186,18 @@ ul {
   font-size: 0.9rem;
   line-height: 1.5;
   font-style: italic;
-  color: var(--gray);
+  color: var(--meta);
 }
 
 .pubs .meta {
   margin-top: 0.05rem;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--gray);
+  color: var(--meta);
 }
 
 .pubs .meta .me {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .muted {
