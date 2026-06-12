@@ -6,9 +6,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Daniel Zeng. AI researcher and engineer.' } = Astro.props;
+const { title, description = 'Daniel Zeng. ML researcher and engineer.' } = Astro.props;
 const path = Astro.url.pathname;
 const isBlog = path.startsWith('/blog');
+const canonical = new URL(path, Astro.site);
 
 // Flip to true to show the Home | Blog nav once the blog is real
 const SHOW_NAV = false;
@@ -21,6 +22,13 @@ const SHOW_NAV = false;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Daniel Zeng" />
+    <meta name="twitter:card" content="summary" />
   </head>
   <body>
     <header class="site-header fade" style="--d: 0">

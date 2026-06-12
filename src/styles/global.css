@@ -1,3 +1,30 @@
+/* Free Palatino clone for devices without Palatino (Android/Linux).
+   Listed after Palatino in the stack, so devices with the real font
+   never download these. */
+@font-face {
+  font-family: 'TeX Gyre Pagella';
+  src: url('/fonts/pagella-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TeX Gyre Pagella';
+  src: url('/fonts/pagella-bold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TeX Gyre Pagella';
+  src: url('/fonts/pagella-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --bg: #fffefc;
   --text: #1f1f1f;
@@ -27,7 +54,7 @@ html {
 }
 
 body {
-  font-family: Palatino, 'Palatino Linotype', Georgia, serif;
+  font-family: Palatino, 'Palatino Linotype', 'TeX Gyre Pagella', Georgia, serif;
   font-size: 17px;
   line-height: 1.65;
   color: var(--text);
