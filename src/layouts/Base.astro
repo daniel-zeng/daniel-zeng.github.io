@@ -4,11 +4,17 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogType?: string;
 }
 
-const { title, description = 'Daniel Zeng. ML researcher and engineer.' } = Astro.props;
+const {
+  title,
+  description = 'Daniel Zeng. ML researcher and engineer.',
+  ogType = 'website',
+} = Astro.props;
 const path = Astro.url.pathname;
 const isBlog = path.startsWith('/blog');
+const isHome = path === '/';
 const canonical = new URL(path, Astro.site);
 
 // Flip to true to show the Home | Blog nav once the blog is real
@@ -23,7 +29,8 @@ const SHOW_NAV = false;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -32,11 +39,19 @@ const SHOW_NAV = false;
   </head>
   <body>
     <header class="site-header fade" style="--d: 0">
-      <a class="name" href="/">Daniel Zeng</a>
+      {
+        isHome ? (
+          <h1 class="name-wrap">
+            <a class="name" href="/">Daniel Zeng</a>
+          </h1>
+        ) : (
+          <a class="name" href="/">Daniel Zeng</a>
+        )
+      }
       {SHOW_NAV && (
         <nav>
           <a href="/" class={!isBlog ? 'active' : ''}>Home</a>
-          <a href="/blog" class={isBlog ? 'active' : ''}>Blog</a>
+          <a href="/blog/" class={isBlog ? 'active' : ''}>Blog</a>
         </nav>
       )}
     </header>

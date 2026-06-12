@@ -61,19 +61,19 @@ const publications = [
 
   <section class="fade" style="--d: 2">
     <h2>Publications</h2>
-    <ul class="pubs">
+    <ul class="pubs" role="list">
       {publications.map((p) => (
         <li>
           <span class="date">{p.date}</span>
-          <span>
+          <div>
             <a href={p.href}>{p.title}</a>
             <p class="venue">{p.note}</p>
             <p class="meta">
               {p.authors.map((a, i) => (
-                <>{i > 0 && ', '}<span class={a === ME ? 'me' : ''}>{a}</span></>
+                <>{i > 0 && ', '}<span class={a === ME ? 'me' : undefined}>{a}</span></>
               ))}
             </p>
-          </span>
+          </div>
         </li>
       ))}
     </ul>

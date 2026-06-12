@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
   return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
 }
 
@@ -18,7 +18,7 @@ const fmt = post.data.date.toLocaleDateString('en-US', {
 });
 ---
 
-<Base title={`${post.data.title} · Daniel Zeng`} description={post.data.description}>
+<Base title={`${post.data.title} · Daniel Zeng`} description={post.data.description} ogType="article">
   <article class="post fade" style="--d: 1">
     <h1>{post.data.title}</h1>
     <p class="post-date">{fmt}</p>

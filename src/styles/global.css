@@ -26,6 +26,7 @@
 }
 
 :root {
+  color-scheme: light dark;
   --bg: #fffefc;
   --text: #1f1f1f;
   --gray: #6b6b6b;
@@ -59,7 +60,7 @@ html {
 
 body {
   font-family: Palatino, 'Palatino Linotype', 'TeX Gyre Pagella', Georgia, serif;
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -78,6 +79,12 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+
+.site-header .name-wrap {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 .site-header .name {
@@ -109,7 +116,8 @@ main {
   text-underline-offset: 4px;
 }
 
-h2 {
+h2,
+.page-title {
   font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -167,15 +175,15 @@ ul {
   font-variant-numeric: tabular-nums;
 }
 
-.pubs > li > span:last-of-type {
+.pubs > li > div {
   line-height: 1.4;
 }
 
-.pubs > li > span > a {
+.pubs > li > div > a {
   text-decoration: none;
 }
 
-.pubs > li > span > a:hover {
+.pubs > li > div > a:hover {
   text-decoration: underline;
   text-decoration-color: var(--gray);
   text-underline-offset: 3px;
@@ -218,7 +226,7 @@ ul {
   margin-top: 0.5rem;
   margin-bottom: 2.5rem;
   font-size: 0.85rem;
-  color: var(--light);
+  color: var(--meta);
 }
 
 .post p {
