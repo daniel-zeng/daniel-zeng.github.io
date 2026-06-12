@@ -67,10 +67,11 @@ const publications = [
           <span class="date">{p.date}</span>
           <span>
             <a href={p.href}>{p.title}</a>
+            <p class="venue">{p.note}</p>
             <p class="meta">
               {p.authors.map((a, i) => (
                 <>{i > 0 && ', '}<span class={a === ME ? 'me' : ''}>{a}</span></>
-              ))}{' · '}<span class="note">{p.note}</span>
+              ))}
             </p>
           </span>
         </li>

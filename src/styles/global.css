@@ -29,6 +29,7 @@
   --bg: #fffefc;
   --text: #1f1f1f;
   --gray: #6b6b6b;
+  --mid: #8d877e;
   --light: #a8a39c;
   --underline: #cfc9c1;
 }
@@ -38,6 +39,7 @@
     --bg: #181715;
     --text: #ece9e4;
     --gray: #a39e97;
+    --mid: #8b857d;
     --light: #6f6a64;
     --underline: #44403a;
   }
@@ -176,19 +178,23 @@ ul {
   text-underline-offset: 3px;
 }
 
-.pubs .meta {
+.pubs .venue {
   margin-top: 0.2rem;
   font-size: 0.85rem;
   line-height: 1.5;
+  font-style: italic;
   color: var(--gray);
 }
 
-.pubs .meta .note {
-  font-style: italic;
+.pubs .meta {
+  margin-top: 0.05rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--mid);
 }
 
 .pubs .meta .me {
-  color: var(--text);
+  font-weight: 500;
 }
 
 .muted {
