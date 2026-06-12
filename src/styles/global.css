@@ -197,7 +197,7 @@ ul {
 }
 
 .pubs .meta .me {
-  font-weight: 700;
+  color: var(--text);
 }
 
 .muted {
