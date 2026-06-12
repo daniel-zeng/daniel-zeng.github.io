@@ -200,6 +200,7 @@ ul {
 
 .pubs .meta .me {
   color: var(--me);
+  -webkit-text-stroke: 0.2px var(--me);
 }
 
 .muted {
