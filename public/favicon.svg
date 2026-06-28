@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="g" x1="14%" y1="17.5%" x2="86%" y2="82.5%">
+      <stop offset="0%" stop-color="#FFE494"/>
+      <stop offset="3.2%" stop-color="#FFDA79"/>
+      <stop offset="6.5%" stop-color="#FECF5A"/>
+      <stop offset="9.7%" stop-color="#FEC43D"/>
+      <stop offset="12.9%" stop-color="#FDBA26"/>
+      <stop offset="16.1%" stop-color="#FDB21A"/>
+      <stop offset="19.4%" stop-color="#FDAC19"/>
+      <stop offset="22.6%" stop-color="#FDA71B"/>
+      <stop offset="25.8%" stop-color="#FDA21C"/>
+      <stop offset="29%" stop-color="#FD9B1E"/>
+      <stop offset="32.3%" stop-color="#FD9222"/>
+      <stop offset="35.5%" stop-color="#FD8A26"/>
+      <stop offset="38.7%" stop-color="#FD842A"/>
+      <stop offset="41.9%" stop-color="#FD7E2E"/>
+      <stop offset="45.2%" stop-color="#FD7833"/>
+      <stop offset="48.4%" stop-color="#FD7239"/>
+      <stop offset="51.6%" stop-color="#FC6B40"/>
+      <stop offset="54.8%" stop-color="#FB6548"/>
+      <stop offset="58.1%" stop-color="#F95E51"/>
+      <stop offset="61.3%" stop-color="#F7575A"/>
+      <stop offset="64.5%" stop-color="#F45163"/>
+      <stop offset="67.7%" stop-color="#F14C6C"/>
+      <stop offset="71%" stop-color="#EC4875"/>
+      <stop offset="74.2%" stop-color="#E6467E"/>
+      <stop offset="77.4%" stop-color="#E14486"/>
+      <stop offset="80.6%" stop-color="#DC428E"/>
+      <stop offset="83.9%" stop-color="#D64196"/>
+      <stop offset="87.1%" stop-color="#CE409F"/>
+      <stop offset="90.3%" stop-color="#C13FA7"/>
+      <stop offset="93.5%" stop-color="#B13FB1"/>
+      <stop offset="96.8%" stop-color="#9E40BD"/>
+      <stop offset="100%" stop-color="#8743CB"/>
+    </linearGradient>
+  </defs>
+  <circle cx="512" cy="512" r="512" fill="url(#g)"/>
+</svg>
